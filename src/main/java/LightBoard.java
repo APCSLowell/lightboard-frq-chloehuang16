@@ -29,18 +29,22 @@ public class LightBoard
   {
     /* to be implemented in part (b) */
     int numOn = 0;
-    if(lights[row][col] == true){
-      for (int i = 0; i<lights.length;i++){
+    for (int i = 0; i<lights.length;i++){
         if (lights[i][col] == true){
           numOn++;
         }
-      }
-      if (numOn % 2 == 0){
-        return false;
-      }
-      else{
-        return true;
-      }
+    }
+    if (lights[row][col] && numOn %2==0){
+      return false;
+    }
+    if (!lights[row][col] && numOn % 3 ==0){
+      return true;
+      
+    }
+    return lights[row][col];
+    
+    
+     
     }
      
  
