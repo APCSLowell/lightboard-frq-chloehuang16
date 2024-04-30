@@ -48,7 +48,6 @@ public class LightBoard
     }
      
  
-  }
   public boolean[][] getLights()
   {
     return lights;
